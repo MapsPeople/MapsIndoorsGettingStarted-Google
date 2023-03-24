@@ -1,15 +1,15 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'MapsIndoorsGettingStarted-Google' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for MapsIndoorsGettingStarted-Google
-# Local development pod
+  # Local development pod
   pod 'MapsIndoorsCore', :path => '/Users/fasa/MISDKIOS/'
   pod 'MapsIndoors', :path => '/Users/fasa/MISDKIOS/'
-  #pod 'MapsIndoorsGoogleMaps', :path => '/Users/fasa/MISDKIOS/'
+  pod 'MapsIndoorsGoogleMaps', :path => '/Users/fasa/MISDKIOS/'
   #pod 'MapsIndoorsMapbox', :path => '/Users/fasa/MISDKIOS/'
 
 end

@@ -1,13 +1,16 @@
 //  AppDelegate.swift
 import UIKit
+import GoogleMaps
+import MapsIndoorsCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    static let mApiKey = "d876ff0e60bb430b8fabb145" // MapsIndoors Test API Key
+    static let gApiKey = ProcessInfo.processInfo.environment["GOOGLE_API_KEY"]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        GMSServices.provideAPIKey(AppDelegate.gApiKey!)
         return true
     }
 
@@ -24,7 +27,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

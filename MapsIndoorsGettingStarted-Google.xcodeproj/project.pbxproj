@@ -48,7 +48,6 @@
 				12EEDD14583EF931C5AA8995 /* Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig */,
 				90B6AE2C8AEA8FE28852A219 /* Pods-MapsIndoorsGettingStarted-Google.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +103,7 @@
 				4DFA96A329CDE4EE007116CF /* Frameworks */,
 				4DFA96A429CDE4EE007116CF /* Resources */,
 				35B352395554822B0E2556BE /* [CP] Embed Pods Frameworks */,
+				6856E33042578A715E92FBC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +176,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6856E33042578A715E92FBC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		80BBCB53B2CF2AD138AE2A54 /* [CP] Check Pods Manifest.lock */ = {
@@ -378,7 +395,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -411,7 +428,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
