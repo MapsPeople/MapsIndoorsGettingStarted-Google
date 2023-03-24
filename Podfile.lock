@@ -1,0 +1,22 @@
+PODS:
+  - MapsIndoors (4.0.0-beta7)
+  - MapsIndoorsCore (4.0.0-beta7):
+    - MapsIndoors (= 4.0.0-beta7)
+
+DEPENDENCIES:
+  - MapsIndoors (from `/Users/fasa/MISDKIOS/`)
+  - MapsIndoorsCore (from `/Users/fasa/MISDKIOS/`)
+
+EXTERNAL SOURCES:
+  MapsIndoors:
+    :path: "/Users/fasa/MISDKIOS/"
+  MapsIndoorsCore:
+    :path: "/Users/fasa/MISDKIOS/"
+
+SPEC CHECKSUMS:
+  MapsIndoors: 82d5d572850709e307b1ed49f83409e06594f307
+  MapsIndoorsCore: f25e636ac050b8cc4cfcc9010f9be906c09c06ae
+
+PODFILE CHECKSUM: 49ef8bc873b3fb025349e6eb64a5c1bd6ae2a7eb
+
+COCOAPODS: 1.12.0

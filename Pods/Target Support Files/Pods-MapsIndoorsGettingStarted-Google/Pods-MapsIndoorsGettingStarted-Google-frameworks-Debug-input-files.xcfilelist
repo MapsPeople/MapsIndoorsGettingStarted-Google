@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoors/MapsIndoors.framework/MapsIndoors
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsCore/MapsIndoorsCore.framework/MapsIndoorsCore
