@@ -21,17 +21,27 @@ class ViewController: UIViewController {
         // Set up the autoresizing mask to keep the map's frame synced with the view controller's frame.
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        // Initialize the MPMapConfig with the GMSMapView
+        // Initialize the MPMapConfig with the GMSMapView. A MPMapConfig is needed to initialise MPMapsIndoors.
         mapConfig = MPMapConfig(gmsMapView: mapView, googleApiKey: AppDelegate.gApiKey!)
-        
-        // Initialize the MPMapControl with the MPMapConfig.
+
         Task {
             // Load MapsIndoors with the MapsIndoors API key.
-            await MPMapsIndoors.shared.load(apiKey: AppDelegate.mApiKey)
+            let error = await MPMapsIndoors.shared.load(apiKey: AppDelegate.mApiKey)
             if let mapConfig = mapConfig {
-                mapControl = MPMapsIndoors.createMapControl(mapConfig: mapConfig)
-                // further set up SDK.
-                // ...
+                if let mapControl = MPMapsIndoors.createMapControl(mapConfig: mapConfig) {
+                    
+                    let query = MPQuery()
+                    let filter = MPFilter()
+                    
+                    query.query = "Family Dining Room"
+                    filter.take = 1
+                    
+                    let locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
+                    if let firstLocation = locations.first {
+                        mapControl.select(location: firstLocation, behavior: .default)
+                        mapControl.select(floorIndex: firstLocation.floorIndex.intValue)
+                    }
+                }
             }
         }
     }
