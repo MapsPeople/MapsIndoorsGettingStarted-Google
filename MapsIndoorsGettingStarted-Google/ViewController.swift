@@ -4,7 +4,14 @@ import MapsIndoorsCore
 import MapsIndoorsGoogleMaps
 import GoogleMaps
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    // Add this property to hold a reference to the MPMapControl object
+    var mpMapControl: MPMapControl?
+    
+    var searchResult: [MPLocation]?
+    lazy var destinationSearch = UISearchBar(frame: CGRect(x: 0, y: 40, width: 0, height: 0))
+    var tableView = UITableView(frame: CGRect(x: 0, y: 90, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     
     var mapView: GMSMapView!
     var mapConfig: MPMapConfig?
@@ -23,26 +30,73 @@ class ViewController: UIViewController {
         
         // Initialize the MPMapConfig with the GMSMapView. A MPMapConfig is needed to initialise MPMapsIndoors.
         mapConfig = MPMapConfig(gmsMapView: mapView, googleApiKey: AppDelegate.gApiKey!)
-
+        
         Task {
             // Load MapsIndoors with the MapsIndoors API key.
             let error = await MPMapsIndoors.shared.load(apiKey: AppDelegate.mApiKey)
-            if let mapConfig = mapConfig {
-                if let mapControl = MPMapsIndoors.createMapControl(mapConfig: mapConfig) {
-                    
-                    let query = MPQuery()
-                    let filter = MPFilter()
-                    
-                    query.query = "Family Dining Room"
-                    filter.take = 1
-                    
-                    let locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
-                    if let firstLocation = locations.first {
-                        mapControl.select(location: firstLocation, behavior: .default)
-                        mapControl.select(floorIndex: firstLocation.floorIndex.intValue)
+            if error == .noError {
+                if let mapConfig = mapConfig {
+                    if let mapControl = MPMapsIndoors.createMapControl(mapConfig: mapConfig) {
+                        
+                        // Retain the mapControl object
+                        self.mpMapControl = mapControl
+                        
+                        let query = MPQuery()
+                        let filter = MPFilter()
+                        
+                        query.query = "Family Dining Room"
+                        filter.take = 1
+                        
+                        let locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
+                        if let firstLocation = locations.first {
+                            mapControl.select(location: firstLocation, behavior: .default)
+                            mapControl.select(floorIndex: firstLocation.floorIndex.intValue)
+                        }
                     }
                 }
+            } else {
+                print("Error loading MapsIndoors: \(error.localizedDescription)")
             }
+        }
+        
+        destinationSearch.sizeToFit()
+        destinationSearch.delegate = self
+        view.addSubview(destinationSearch)
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResult?.count ?? 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let location = searchResult?[indexPath.row]
+        cell.textLabel?.text = location?.name ?? ""
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let location = searchResult?[indexPath.row] else { return }
+        mpMapControl?.goTo(entity: location) // Use the retained mpMapControl object
+        tableView.removeFromSuperview()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        view.addSubview(tableView)
+        let query = MPQuery()
+        let filter = MPFilter()
+        query.query = searchText
+        filter.take = 100
+        Task {
+            searchResult = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
+            tableView.reloadData()
         }
     }
 }
