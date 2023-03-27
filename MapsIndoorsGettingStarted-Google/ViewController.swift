@@ -6,6 +6,10 @@ import GoogleMaps
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    // Add the renderer property and origin point(static for demo purpose)
+    var directionsRenderer: MPDirectionsRenderer?
+    var origin: MPLocation?
+    
     // Add this property to hold a reference to the MPMapControl object
     var mpMapControl: MPMapControl?
     
@@ -51,6 +55,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         if let firstLocation = locations.first {
                             mapControl.select(location: firstLocation, behavior: .default)
                             mapControl.select(floorIndex: firstLocation.floorIndex.intValue)
+                            // set the origin as Family Dining room
+                            origin = firstLocation
                         }
                     }
                 }
@@ -86,6 +92,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let location = searchResult?[indexPath.row] else { return }
         mpMapControl?.goTo(entity: location) // Use the retained mpMapControl object
         tableView.removeFromSuperview()
+        
+        // Call the directions(to:) function
+        directions(to: location)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -97,6 +106,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Task {
             searchResult = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
             tableView.reloadData()
+        }
+    }
+    
+    func directions(to destination: MPLocation) {
+        guard let mapControl = mpMapControl else { return }
+        
+        if directionsRenderer == nil {
+            directionsRenderer = mapControl.newDirectionsRenderer()
+        }
+        
+        let directionsQuery = MPDirectionsQuery(origin: origin!, destination: destination)
+        
+        Task {
+            do {
+                let route = try await MPMapsIndoors.shared.directionsService.routingWith(query: directionsQuery)
+                directionsRenderer?.route = route
+                directionsRenderer?.routeLegIndex = 0
+                directionsRenderer?.animate(duration: 5)
+            } catch {
+                print("Error getting directions: \(error.localizedDescription)")
+            }
         }
     }
 }
