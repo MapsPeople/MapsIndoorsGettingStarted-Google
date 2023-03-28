@@ -33,9 +33,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
-  MapsIndoors: 82d5d572850709e307b1ed49f83409e06594f307
-  MapsIndoorsCore: f25e636ac050b8cc4cfcc9010f9be906c09c06ae
-  MapsIndoorsGoogleMaps: e40bf67a47841323471dde59023b3ba25affe7df
+  MapsIndoors: d6c55b2c9c53df6696f53f4b941d05b87f128396
+  MapsIndoorsCore: f4a36b6cb59eeff8fff95c41dff652e4b3846a49
+  MapsIndoorsGoogleMaps: 2f41e8afc13abb2ac2a2a87cd310a0d9b3d3358d
   ValueAnimator: b9ed721f3a0fc682ec857fd70dc933b28adb7522
 
 PODFILE CHECKSUM: 2ad10ba0ba8702a1330502255310af3e22e63d7d

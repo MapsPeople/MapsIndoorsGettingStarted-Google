@@ -36,9 +36,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         mapConfig = MPMapConfig(gmsMapView: mapView, googleApiKey: AppDelegate.gApiKey!)
         
         Task {
-            // Load MapsIndoors with the MapsIndoors API key.
-            let error = await MPMapsIndoors.shared.load(apiKey: AppDelegate.mApiKey)
-            if error == .noError {
+            do {
+                // Load MapsIndoors with the MapsIndoors API key.
+                try await MPMapsIndoors.shared.load(apiKey: AppDelegate.mApiKey)
+                
                 if let mapConfig = mapConfig {
                     if let mapControl = MPMapsIndoors.createMapControl(mapConfig: mapConfig) {
                         
@@ -60,7 +61,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         }
                     }
                 }
-            } else {
+                
+            } catch {
                 print("Error loading MapsIndoors: \(error.localizedDescription)")
             }
         }
