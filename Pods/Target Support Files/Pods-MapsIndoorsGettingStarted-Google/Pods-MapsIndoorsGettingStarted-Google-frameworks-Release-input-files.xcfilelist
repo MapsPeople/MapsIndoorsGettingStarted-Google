@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Atomics/Atomics.framework
 ${BUILT_PRODUCTS_DIR}/ValueAnimator/ValueAnimator.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoors/MapsIndoors.framework/MapsIndoors
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsCore/MapsIndoorsCore.framework/MapsIndoorsCore

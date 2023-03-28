@@ -10,7 +10,8 @@ target 'MapsIndoorsGettingStarted-Google' do
   pod 'MapsIndoorsCore', :path => '/Users/fasa/MISDKIOS/'
   pod 'MapsIndoors', :path => '/Users/fasa/MISDKIOS/'
   pod 'MapsIndoorsGoogleMaps', :path => '/Users/fasa/MISDKIOS/'
-  #pod 'MapsIndoorsMapbox', :path => '/Users/fasa/MISDKIOS/'
+  # Need the following for Google Maps SDK submodule to be built
+  pod 'Atomics', '~> 0.9.0'
 
 end
 
