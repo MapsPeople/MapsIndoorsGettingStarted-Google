@@ -19,15 +19,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Buttons for Live Data
     lazy var livePositionButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.setTitle("Toggle Live Position", for: .normal)
+        button.backgroundColor = UIColor(red: 35/255, green: 85/255, blue: 84/255, alpha: 1)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(toggleLivePosition), for: .touchUpInside)
         return button
     }()
     
     lazy var liveOccupancyButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.setTitle("Toggle Live Occupancy", for: .normal)
+        button.backgroundColor = UIColor(red: 35/255, green: 85/255, blue: 84/255, alpha: 1)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(toggleLiveOccupancy), for: .touchUpInside)
         return button
     }()
@@ -87,6 +93,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         destinationSearch.sizeToFit()
         destinationSearch.delegate = self
+        destinationSearch.barTintColor = UIColor(red: 35/255, green: 85/255, blue: 84/255, alpha: 1)
+        destinationSearch.searchTextField.textColor = .white
+        destinationSearch.searchTextField.backgroundColor = UIColor(red: 75/255, green: 125/255, blue: 124/255, alpha: 0.3)
+        destinationSearch.searchTextField.layer.cornerRadius = 8
+        destinationSearch.searchTextField.clipsToBounds = true
         view.addSubview(destinationSearch)
         
         tableView.dataSource = self
