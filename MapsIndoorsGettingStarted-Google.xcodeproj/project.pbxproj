@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D72753329D439BF00BB7556 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4D72753229D439BF00BB7556 /* .gitignore */; };
 		4DFA96AA29CDE4EE007116CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96A929CDE4EE007116CF /* AppDelegate.swift */; };
 		4DFA96AC29CDE4EE007116CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96AB29CDE4EE007116CF /* SceneDelegate.swift */; };
 		4DFA96AE29CDE4EE007116CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96AD29CDE4EE007116CF /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		12EEDD14583EF931C5AA8995 /* Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig"; sourceTree = "<group>"; };
 		4621C40EDB314561D7AD8FFC /* Pods_MapsIndoorsGettingStarted_Google.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsGettingStarted_Google.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D72753229D439BF00BB7556 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4DFA96A629CDE4EE007116CF /* MapsIndoorsGettingStarted-Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsGettingStarted-Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFA96A929CDE4EE007116CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DFA96AB29CDE4EE007116CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4DFA96B229CDE4F0007116CF /* Assets.xcassets */,
 				4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */,
 				4DFA96B729CDE4F0007116CF /* Info.plist */,
+				4D72753229D439BF00BB7556 /* .gitignore */,
 			);
 			path = "MapsIndoorsGettingStarted-Google";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D72753329D439BF00BB7556 /* .gitignore in Resources */,
 				4DFA96B629CDE4F0007116CF /* LaunchScreen.storyboard in Resources */,
 				4DFA96B329CDE4F0007116CF /* Assets.xcassets in Resources */,
 				4DFA96B129CDE4EE007116CF /* Main.storyboard in Resources */,
