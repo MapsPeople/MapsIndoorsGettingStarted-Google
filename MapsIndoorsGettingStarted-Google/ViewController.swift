@@ -17,6 +17,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     lazy var destinationSearch = UISearchBar(frame: CGRect(x: 0, y: 40, width: 0, height: 0))
     var tableView = UITableView(frame: CGRect(x: 0, y: 90, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     
+    // Buttons for Live Data
+    lazy var livePositionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Toggle Live Position", for: .normal)
+        button.addTarget(self, action: #selector(toggleLivePosition), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var liveOccupancyButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Toggle Live Occupancy", for: .normal)
+        button.addTarget(self, action: #selector(toggleLiveOccupancy), for: .touchUpInside)
+        return button
+    }()
+    
+    var isLivePositionEnabled = false
+    var isLiveOccupancyEnabled = false
+    
     var mapView: GMSMapView!
     var mapConfig: MPMapConfig?
     var mapControl: MPMapControl?
@@ -73,6 +91,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // Add the buttons to the view and set their constraints
+        view.addSubview(livePositionButton)
+        view.addSubview(liveOccupancyButton)
+        
+        livePositionButton.translatesAutoresizingMaskIntoConstraints = false
+        liveOccupancyButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            livePositionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            livePositionButton.topAnchor.constraint(equalTo: destinationSearch.bottomAnchor, constant: 8),
+            
+            liveOccupancyButton.leadingAnchor.constraint(equalTo: livePositionButton.trailingAnchor, constant: 16),
+            liveOccupancyButton.centerYAnchor.constraint(equalTo: livePositionButton.centerYAnchor)
+        ])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,6 +162,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } catch {
                 print("Error getting directions: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    // Functions for Live Data
+    @objc func toggleLivePosition() {
+        isLivePositionEnabled.toggle()
+        if isLivePositionEnabled {
+            mpMapControl?.enableLiveData(domain: MPLiveDomainType.position) { liveUpdate in
+                // Handle the live position updates here
+                print("Position live update: \(liveUpdate)")
+            }
+        } else {
+            mpMapControl?.disableLiveData(domain: MPLiveDomainType.position)
+        }
+    }
+
+    @objc func toggleLiveOccupancy() {
+        isLiveOccupancyEnabled.toggle()
+        if isLiveOccupancyEnabled {
+            mpMapControl?.enableLiveData(domain: MPLiveDomainType.occupancy) { liveUpdate in
+                // Handle the live occupancy updates here
+                print("Occupancy live update: \(liveUpdate)")
+            }
+        } else {
+            mpMapControl?.disableLiveData(domain: MPLiveDomainType.occupancy)
         }
     }
 }
