@@ -6,8 +6,6 @@ target 'MapsIndoorsGettingStarted-Google' do
   use_frameworks!
 
   # Pods for MapsIndoorsGettingStarted-Google
-  pod 'MapsIndoorsCore', '~> 4.0.2'
-  pod 'MapsIndoors', '~> 4.0.2'
   pod 'MapsIndoorsGoogleMaps', '~> 4.0.2'
 
 end
