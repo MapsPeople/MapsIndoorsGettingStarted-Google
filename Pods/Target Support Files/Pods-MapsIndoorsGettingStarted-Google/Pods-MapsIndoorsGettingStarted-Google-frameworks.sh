@@ -41,7 +41,7 @@ install_framework()
 
   if [ -L "${source}" ]; then
     echo "Symlinked..."
-    source="$(readlink "${source}")"
+    source="$(readlink -f "${source}")"
   fi
 
   if [ -d "${source}/${BCSYMBOLMAP_DIR}" ]; then
@@ -176,13 +176,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ValueAnimator/ValueAnimator.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoors/MapsIndoors.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsCore/MapsIndoorsCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsGoogleMaps/MapsIndoorsGoogleMaps.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ValueAnimator/ValueAnimator.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoors/MapsIndoors.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsCore/MapsIndoorsCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MapsIndoorsGoogleMaps/MapsIndoorsGoogleMaps.framework"

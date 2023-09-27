@@ -1,6 +1,7 @@
 //  ViewController.swift
 import UIKit
 import MapsIndoorsCore
+import MapsIndoors
 import MapsIndoorsGoogleMaps
 import GoogleMaps
 

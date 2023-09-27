@@ -20,6 +20,7 @@
 #define kMPMI_EndPointUserRole   @"appuserroles"
 #define kMPMI_EndPointRouteLayer @"routelayer"
 #define kMPMI_EndPointDataSet    @"dataset"
+#define kMPMI_EndPointDerivedGeometry @"derivedGeometry"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -31,8 +32,6 @@ typedef void (^RefreshSessionCompletionBlock)(void);
 /// > Warning: [INTERNAL - DO NOT USE]
 @interface MPMIAPI (Private)
 
-+ (instancetype) sharedInstance;
-
 #pragma mark - Session info
 @property (nonatomic, strong, readonly, nonnull) NSString*      currentBaseUrl;     // May change dynamically.
 @property (nonatomic, strong, readonly, nullable) NSString*     sessionToken;
@@ -41,7 +40,6 @@ typedef void (^RefreshSessionCompletionBlock)(void);
 @property (nonatomic, strong, readonly, nullable) NSError*      sessionTokenRefreshError;
 @property (nonatomic, readonly) BOOL                            apiKeyValid;
 @property (nonatomic, readonly) BOOL                            isAuthorised;
-@property (nonatomic, readwrite) BOOL                           useDevEnvironment;
 
 #pragma mark - API Endpoint getters
 @property (nonatomic, strong, readonly, nonnull) NSString*      gatewayUrl;
@@ -72,6 +70,7 @@ typedef void (^RefreshSessionCompletionBlock)(void);
 - (NSString*) userRolesSyncUrlForSolutionId:(NSString*)solutionId language:(nullable NSString*)language;
 - (NSString*) routeLayerSyncUrlForSolutionId:(NSString*)solutionId language:(NSString*)language;
 - (NSString*) dataSetSyncUrlForSolutionId:(NSString*)solutionId language:(nullable NSString*)language;
+- (NSString*) derivedGeometrySyncUrlForSolutionId:(NSString*)solutionId language:(nullable NSString*)language;
 - (NSString*) liveDataUrl:(NSString*)endpoint apiKey:(nullable NSString*)apiKey;
 - (NSString*) liveDataStateUrl:(NSString*)topic;
 - (NSString*) loggingUrl:(NSString*)apiKey;

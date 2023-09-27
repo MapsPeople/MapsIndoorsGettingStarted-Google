@@ -33,6 +33,7 @@
 #define kMPErrorCodeCategoriesNotFound                              100710
 #define kMPErrorCodeAppDataNotFound                                 100810
 #define kMPErrorCodeUserRolesNotFound                               100910
+#define kMPErrorCodeDerivedGeometryNotFound                         100920
 
 #define kMPErrorCodeOfflineContentNotFound                          101010
 
@@ -63,6 +64,8 @@
 #define kMPErrorCodeRouteLayerNotFound                              103010
 
 #define kMPErrorCodeNotAuthorised                                   104000
+
+#define kMPErrorCodeNetworkUnreachable                              104010
 
 #define kMPMapsIndoorsDomain @"com.mapspeople.MapsIndoors"
 

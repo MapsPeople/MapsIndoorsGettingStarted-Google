@@ -4,19 +4,15 @@ PODS:
   - GoogleMaps/Base (7.4.0)
   - GoogleMaps/Maps (7.4.0):
     - GoogleMaps/Base
-  - MapsIndoors (4.0.2)
-  - MapsIndoorsCore (4.0.2):
-    - MapsIndoors (= 4.0.2)
-  - MapsIndoorsGoogleMaps (4.0.2):
+  - MapsIndoors (4.2.5)
+  - MapsIndoorsCore (4.2.5):
+    - MapsIndoors (= 4.2.5)
+  - MapsIndoorsGoogleMaps (4.2.5):
     - GoogleMaps (= 7.4.0)
-    - MapsIndoorsCore (= 4.0.2)
-    - ValueAnimator (= 0.6.8)
-  - ValueAnimator (0.6.8)
+    - MapsIndoorsCore (= 4.2.5)
 
 DEPENDENCIES:
-  - MapsIndoors (~> 4.0.2)
-  - MapsIndoorsCore (~> 4.0.2)
-  - MapsIndoorsGoogleMaps (~> 4.0.2)
+  - MapsIndoorsGoogleMaps (~> 4.2.5)
 
 SPEC REPOS:
   trunk:
@@ -24,15 +20,13 @@ SPEC REPOS:
     - MapsIndoors
     - MapsIndoorsCore
     - MapsIndoorsGoogleMaps
-    - ValueAnimator
 
 SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
-  MapsIndoors: be722b256ba5421dd8b59ffde46c1caab00f53bd
-  MapsIndoorsCore: 6cc77f328e490c8740fe14672248f29ea2008d8b
-  MapsIndoorsGoogleMaps: 2c7a4c1680d1e2ab0aa3835684770addb26bac99
-  ValueAnimator: b9ed721f3a0fc682ec857fd70dc933b28adb7522
+  MapsIndoors: e022b1587fda229cf38307d812c8198ecdf1de25
+  MapsIndoorsCore: 776f2e32e7f6cca28cdc471e7f0e9e7278258c4d
+  MapsIndoorsGoogleMaps: ac0124d0cf3bc457194f0544478e035336c4f397
 
-PODFILE CHECKSUM: ffe66064ab91c9f1ea56a07515957270f6a14e2c
+PODFILE CHECKSUM: 725d4f5f34ca744837b304b411872fcce30bece1
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

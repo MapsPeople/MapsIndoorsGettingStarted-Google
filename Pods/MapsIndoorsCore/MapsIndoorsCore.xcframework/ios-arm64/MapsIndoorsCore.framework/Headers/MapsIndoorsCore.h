@@ -14,13 +14,15 @@
 
 #import <MapsIndoorsCore/MPSolutionInternal.h>
 #import <MapsIndoorsCore/MPSolutionProvider.h>
+#import <MapsIndoorsCore/MPDerivedGeometryProvider.h>
+#import <MapsIndoorsCore/MPDerivedGeometry.h>
+#import <MapsIndoorsCore/MPDerivedGeometryCollection.h>
 
 #import <MapsIndoorsCore/MPAppData.h>
 #import <MapsIndoorsCore/MPBuildingInternal.h>
 #import <MapsIndoorsCore/MPBuildingInfo.h>
 #import <MapsIndoorsCore/MPFloorInternal.h>
 #import <MapsIndoorsCore/MPFloorSelectorControl.h>
-#import <MapsIndoorsCore/MPLocationUpdate.h>
 #import <MapsIndoorsCore/MPLocationProperty.h>
 #import <MapsIndoorsCore/MPMapStyleInternal.h>
 
@@ -38,17 +40,16 @@
 #import <MapsIndoorsCore/NSString+UrlRequest.h>
 #import <MapsIndoorsCore/MPAppDataProvider.h>
 #import <MapsIndoorsCore/MPMenuItem.h>
-#import <MapsIndoorsCore/MPMIAPI.h>
-#import <MapsIndoorsCore/MPVersion.h>
-#import <MapsIndoorsCore/MPVersionConstants.h>
 #import <MapsIndoorsCore/MPMapsIndoorsLegacy.h>
 
 #import <MapsIndoorsCore/MPLocationSource.h>
+#import <MapsIndoorsCore/MPLocationFieldInternal.h>
+#import <MapsIndoorsCore/MPLocationField+Mutable.h>
 #import <MapsIndoorsCore/MPMQTTSubscriptionClient.h>
 #import <MapsIndoorsCore/MPLiveDataManager.h>
 #import <MapsIndoorsCore/MPLiveDataInfo.h>
 
-#import <MapsIndoorsCore/MPDirectionsServiceInternal.h>
+#import <MapsIndoorsCore/MPDirectionsServiceImpl.h>
 #import <MapsIndoorsCore/MPDistanceMatrixElements.h>
 #import <MapsIndoorsCore/MPDistanceMatrixProvider.h>
 #import <MapsIndoorsCore/MPDistanceMatrixResult.h>
@@ -70,6 +71,7 @@
 #import <MapsIndoorsCore/MPTransitVehicleInternal.h>
 
 #import <MapsIndoorsCore/MPLocationService.h>
+#import <MapsIndoorsCore/MPLogger.h>
 
 #import <MapsIndoorsCore/MPDataSetCacheManagerInternal.h>
 #import <MapsIndoorsCore/MPDataSetCacheInternal.h>
@@ -92,3 +94,11 @@
 #import <MapsIndoorsCore/NSString+MPPropertyClassification.h>
 #import <MapsIndoorsCore/NSObject+GeometryProperties.h>
 #import <MapsIndoorsCore/MPRouteNode.h>
+
+#import <MapsIndoorsCore/MPDataProvider.h>
+
+#import <MapsIndoorsCore/MPMIAPI.h>
+#import <MapsIndoorsCore/MPRouteNetworkService.h>
+#import <MapsIndoorsCore/MPRouteNetworkData.h>
+#import <MapsIndoorsCore/MPGeometryHelper.h>
+#import <MapsIndoorsCore/MPDirectionsHelper.h>
