@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D72753329D439BF00BB7556 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4D72753229D439BF00BB7556 /* .gitignore */; };
 		4DFA96AA29CDE4EE007116CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96A929CDE4EE007116CF /* AppDelegate.swift */; };
 		4DFA96AC29CDE4EE007116CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96AB29CDE4EE007116CF /* SceneDelegate.swift */; };
 		4DFA96AE29CDE4EE007116CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA96AD29CDE4EE007116CF /* ViewController.swift */; };
 		4DFA96B129CDE4EE007116CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA96AF29CDE4EE007116CF /* Main.storyboard */; };
 		4DFA96B329CDE4F0007116CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA96B229CDE4F0007116CF /* Assets.xcassets */; };
 		4DFA96B629CDE4F0007116CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */; };
-		5D6349E12E44DBEA1405BD7B /* Pods_MapsIndoorsGettingStarted_Google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4621C40EDB314561D7AD8FFC /* Pods_MapsIndoorsGettingStarted_Google.framework */; };
+		BD73B9FF2DA6749B00464C3B /* MapsIndoorsGoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BD73B9FE2DA6749B00464C3B /* MapsIndoorsGoogleMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12EEDD14583EF931C5AA8995 /* Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig"; sourceTree = "<group>"; };
-		4621C40EDB314561D7AD8FFC /* Pods_MapsIndoorsGettingStarted_Google.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsGettingStarted_Google.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D72753229D439BF00BB7556 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4DFA96A629CDE4EE007116CF /* MapsIndoorsGettingStarted-Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsGettingStarted-Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFA96A929CDE4EE007116CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DFA96AB29CDE4EE007116CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +25,6 @@
 		4DFA96B229CDE4F0007116CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DFA96B529CDE4F0007116CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DFA96B729CDE4F0007116CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90B6AE2C8AEA8FE28852A219 /* Pods-MapsIndoorsGettingStarted-Google.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsGettingStarted-Google.release.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,29 +32,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6349E12E44DBEA1405BD7B /* Pods_MapsIndoorsGettingStarted_Google.framework in Frameworks */,
+				BD73B9FF2DA6749B00464C3B /* MapsIndoorsGoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17201B09CA019C57868DCEEC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				12EEDD14583EF931C5AA8995 /* Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig */,
-				90B6AE2C8AEA8FE28852A219 /* Pods-MapsIndoorsGettingStarted-Google.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		4DFA969D29CDE4EE007116CF = {
 			isa = PBXGroup;
 			children = (
 				4DFA96A829CDE4EE007116CF /* MapsIndoorsGettingStarted-Google */,
 				4DFA96A729CDE4EE007116CF /* Products */,
-				17201B09CA019C57868DCEEC /* Pods */,
-				B644ED36070668DD7989D5D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,17 +65,8 @@
 				4DFA96B229CDE4F0007116CF /* Assets.xcassets */,
 				4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */,
 				4DFA96B729CDE4F0007116CF /* Info.plist */,
-				4D72753229D439BF00BB7556 /* .gitignore */,
 			);
 			path = "MapsIndoorsGettingStarted-Google";
-			sourceTree = "<group>";
-		};
-		B644ED36070668DD7989D5D4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4621C40EDB314561D7AD8FFC /* Pods_MapsIndoorsGettingStarted_Google.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,12 +76,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DFA96BA29CDE4F0007116CF /* Build configuration list for PBXNativeTarget "MapsIndoorsGettingStarted-Google" */;
 			buildPhases = (
-				80BBCB53B2CF2AD138AE2A54 /* [CP] Check Pods Manifest.lock */,
 				4DFA96A229CDE4EE007116CF /* Sources */,
 				4DFA96A329CDE4EE007116CF /* Frameworks */,
 				4DFA96A429CDE4EE007116CF /* Resources */,
-				35B352395554822B0E2556BE /* [CP] Embed Pods Frameworks */,
-				6856E33042578A715E92FBC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 4DFA969D29CDE4EE007116CF;
+			packageReferences = (
+				BD73B9FD2DA6749B00464C3B /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */,
+			);
 			productRefGroup = 4DFA96A729CDE4EE007116CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,7 +130,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D72753329D439BF00BB7556 /* .gitignore in Resources */,
 				4DFA96B629CDE4F0007116CF /* LaunchScreen.storyboard in Resources */,
 				4DFA96B329CDE4F0007116CF /* Assets.xcassets in Resources */,
 				4DFA96B129CDE4EE007116CF /* Main.storyboard in Resources */,
@@ -163,65 +137,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		35B352395554822B0E2556BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6856E33042578A715E92FBC1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsGettingStarted-Google/Pods-MapsIndoorsGettingStarted-Google-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		80BBCB53B2CF2AD138AE2A54 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MapsIndoorsGettingStarted-Google-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DFA96A229CDE4EE007116CF /* Sources */ = {
@@ -372,7 +287,6 @@
 		};
 		4DFA96BB29CDE4F0007116CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12EEDD14583EF931C5AA8995 /* Pods-MapsIndoorsGettingStarted-Google.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -405,7 +319,6 @@
 		};
 		4DFA96BC29CDE4F0007116CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90B6AE2C8AEA8FE28852A219 /* Pods-MapsIndoorsGettingStarted-Google.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD73B9FD2DA6749B00464C3B /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MapsPeople/mapsindoors-googlemaps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD73B9FE2DA6749B00464C3B /* MapsIndoorsGoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD73B9FD2DA6749B00464C3B /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */;
+			productName = MapsIndoorsGoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DFA969E29CDE4EE007116CF /* Project object */;
 }

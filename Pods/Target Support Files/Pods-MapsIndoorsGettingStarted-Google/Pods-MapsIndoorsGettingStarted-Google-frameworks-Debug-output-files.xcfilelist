@@ -1,3 +1,0 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapsIndoors.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapsIndoorsCore.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapsIndoorsGoogleMaps.framework
