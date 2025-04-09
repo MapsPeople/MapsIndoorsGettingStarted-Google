@@ -14,6 +14,11 @@
 		4DFA96B329CDE4F0007116CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA96B229CDE4F0007116CF /* Assets.xcassets */; };
 		4DFA96B629CDE4F0007116CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */; };
 		BD73B9FF2DA6749B00464C3B /* MapsIndoorsGoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BD73B9FE2DA6749B00464C3B /* MapsIndoorsGoogleMaps */; };
+		BD73BA042DA6751300464C3B /* ViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA012DA6751300464C3B /* ViewController+UISearchBarDelegate.swift */; };
+		BD73BA052DA6751300464C3B /* ViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA022DA6751300464C3B /* ViewController+UITableViewDataSource.swift */; };
+		BD73BA062DA6751300464C3B /* ViewController+LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA002DA6751300464C3B /* ViewController+LiveData.swift */; };
+		BD73BA072DA6751300464C3B /* ViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA032DA6751300464C3B /* ViewController+UITableViewDelegate.swift */; };
+		BD73BA092DA6766000464C3B /* ExampleUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA082DA6766000464C3B /* ExampleUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		4DFA96B229CDE4F0007116CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DFA96B529CDE4F0007116CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DFA96B729CDE4F0007116CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD73BA002DA6751300464C3B /* ViewController+LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+LiveData.swift"; sourceTree = "<group>"; };
+		BD73BA012DA6751300464C3B /* ViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		BD73BA022DA6751300464C3B /* ViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		BD73BA032DA6751300464C3B /* ViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		BD73BA082DA6766000464C3B /* ExampleUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +71,15 @@
 				4DFA96A929CDE4EE007116CF /* AppDelegate.swift */,
 				4DFA96AB29CDE4EE007116CF /* SceneDelegate.swift */,
 				4DFA96AD29CDE4EE007116CF /* ViewController.swift */,
-				4DFA96AF29CDE4EE007116CF /* Main.storyboard */,
+				BD73BA082DA6766000464C3B /* ExampleUI.swift */,
+				BD73BA002DA6751300464C3B /* ViewController+LiveData.swift */,
+				BD73BA012DA6751300464C3B /* ViewController+UISearchBarDelegate.swift */,
+				BD73BA022DA6751300464C3B /* ViewController+UITableViewDataSource.swift */,
+				BD73BA032DA6751300464C3B /* ViewController+UITableViewDelegate.swift */,
 				4DFA96B229CDE4F0007116CF /* Assets.xcassets */,
-				4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */,
 				4DFA96B729CDE4F0007116CF /* Info.plist */,
+				4DFA96B429CDE4F0007116CF /* LaunchScreen.storyboard */,
+				4DFA96AF29CDE4EE007116CF /* Main.storyboard */,
 			);
 			path = "MapsIndoorsGettingStarted-Google";
 			sourceTree = "<group>";
@@ -144,6 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFA96AE29CDE4EE007116CF /* ViewController.swift in Sources */,
+				BD73BA042DA6751300464C3B /* ViewController+UISearchBarDelegate.swift in Sources */,
+				BD73BA052DA6751300464C3B /* ViewController+UITableViewDataSource.swift in Sources */,
+				BD73BA062DA6751300464C3B /* ViewController+LiveData.swift in Sources */,
+				BD73BA092DA6766000464C3B /* ExampleUI.swift in Sources */,
+				BD73BA072DA6751300464C3B /* ViewController+UITableViewDelegate.swift in Sources */,
 				4DFA96AA29CDE4EE007116CF /* AppDelegate.swift in Sources */,
 				4DFA96AC29CDE4EE007116CF /* SceneDelegate.swift in Sources */,
 			);
