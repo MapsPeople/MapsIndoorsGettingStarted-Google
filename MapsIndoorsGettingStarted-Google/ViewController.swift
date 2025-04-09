@@ -85,7 +85,4 @@ class ViewController: UIViewController {
     var searchResult: [MPLocation]?
     lazy var tableView = UITableView(frame: CGRect(x: 0, y: 90, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
 
-    var isLivePositionEnabled = false
-    var isLiveOccupancyEnabled = false
-
 }
