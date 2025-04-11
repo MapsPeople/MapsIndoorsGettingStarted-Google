@@ -6,7 +6,7 @@ import MapsIndoorsCore
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static let mApiKey = "d876ff0e60bb430b8fabb145" // MapsIndoors Test API Key
+    static let mApiKey = "mapspeople" // MapsIndoors Test API Key
     static let gApiKey = ProcessInfo.processInfo.environment["GOOGLE_API_KEY"]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
